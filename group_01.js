@@ -7,8 +7,14 @@ var emplArray = [arrayAtticus, arrayJem, arrayBoo, arrayScout];
 
 //function to iterate through the array of all employees and feed into the bonus function
 function emplIterate(array){
+  var dest = document.getElementById('arrays');
+
   for(var i = 0; i < array.length; i++){
     console.log(emplBonus(array[i]));
+    var para = document.createElement('p');
+    var node = document.createTextNode(emplBonus(array[i]));
+    para.appendChild(node);
+    dest.appendChild(para);
   }
 }
 //calculate bonuses
