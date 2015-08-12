@@ -5,14 +5,14 @@ var arrayScout = ["Scout", "6243", "74750", 5];
 //add all employess into an array
 var emplArray = [arrayAtticus, arrayJem, arrayBoo, arrayScout];
 
-//function to iterate through the array of all employees and feed into the bonus function
+//function to iterate through the array of all employees and feed into the bonus function + insert into DOM
 function emplIterate(array){
   var dest = document.getElementById('arrays');
-
+  var para, node
   for(var i = 0; i < array.length; i++){
     console.log(emplBonus(array[i]));
-    var para = document.createElement('p');
-    var node = document.createTextNode(emplBonus(array[i]));
+    para = document.createElement('p');
+    node = document.createTextNode(emplBonus(array[i]));
     para.appendChild(node);
     dest.appendChild(para);
   }
